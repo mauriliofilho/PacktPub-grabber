@@ -1,58 +1,58 @@
 # PacktPub Grabber
 
-Grabs [Today's Free Learning eBook from PacktPub](https://www.packtpub.com/packt/offers/free-learning) & notifies you via Email.
+Clamar [eBook Gratuito de Aprendizagem de hoje da PacktPub] (https://www.packtpub.com/packt/offers/free-learning) e notifica-lo via e-mail.
 
-## Dependencies
+## Dependências
 
-```sh
-pip install -r requirements.txt
-```
-Or, on Arch Linux:
-```sh
-pip2 install -r requirements.txt
-```
+`` `sh
+instalação pip -r requirements.txt
+`` `
+Ou, no Arch Linux:
+`` `sh
+instalação de pip2 -r requirements.txt
+`` `
 ## Configuration
-Steps to configure the script.
+Etapas para configurar o script.
 
-#### PacktPub Account Information
-Replace USERNAME and PASSWORD on line 8 and 9 with your PacktPub username (email address) and password.
+#### Informações da conta do PacktPub
+Substitua USERNAME e PASSWORD na linha 8 e 9 pelo nome de usuário (endereço de e-mail) e senha do PacktPub.
 
-```python
-    br.form["email"] = "USERNAME"
-    br.form["password"] = "PASSWORD"
-```
+`` `python
+    br.form ["email"] = "USERNAME"
+    br.form ["password"] = "SENHA"
+`` `
 
-#### Email Account Information
+#### Informações da conta de e-mail
 
-The script sends the email from a Gmail address you specify to your another email address. Note that, only Gmail account is accepted for sending email. I'd advise not to use your existing Gmail account since you need to enable access for less secure apps. 
+O script envia o email de um endereço do Gmail que você especifica para o seu outro endereço de email. Observe que somente a conta do Gmail é aceita para enviar e-mails. Eu aconselho não usar sua conta do Gmail já que você precisa ativar o acesso a aplicativos menos seguros.
 
-* Create a new Gmail account.
-* [Enable access for less secure apps](https://support.google.com/accounts/answer/6010255?hl=en) on the (new) sending Gmail account.
-* Replace the "FROM", "TO", and "EMAIL PASSWORD" on the last line with your sending Gmail address, receiving Email address and the sending Gmail account's password respectively. 
+* Crie uma nova conta do Gmail.
+* [Ativar acesso para aplicativos menos seguros] (https://support.google.com/accounts/answer/6010255?hl=pt-BR) na (nova) conta de envio do Gmail.
+* Substitua o "FROM", "TO", e "EMAIL PASSWORD" na última linha com o seu endereço de envio do Gmail, recebendo endereço de e-mail e a senha da conta de envio do Gmail, respectivamente.
 
-```python
-    send_email("FROM", "TO", "PacktPub Grabber", outcome, "EMAIL PASSWORD")
-``` 
-After each run, you'll receive an email in the "TO" address with the success/failure message.
+`` `python
+    send_email ("FROM", "TO", "PacktPub Grabber", resultado, "EMAIL PASSWORD")
+`` `
+Após cada execução, você receberá um e-mail no endereço "TO" com a mensagem de sucesso / falha.
 
-![Email From PacktPub Grabber](https://cloud.githubusercontent.com/assets/5013296/17832328/c5f7f45c-671f-11e6-986f-cd78133329d4.png)
+! [Email do PacktPub Grabber] (https://cloud.githubusercontent.com/assets/5013296/17832328/c5f7f45c-671f-11e6-986f-cd78133329d4.png)
 
-## Run
-Two ways to go about running the script.
+## Corre
+Duas maneiras de executar o script.
 
-#### Manually
-To run manually, simply go to the shell and type:
+#### Manualmente
+Para executar manualmente, basta ir ao shell e digitar:
 
-```python
-    python /path/to/packtpub-grabber/packtpub-grabber.py
-```
-#### Automatically
-Since the purpose of the script is to automate the whole process of getting a free Ebook everyday, you should choose an automated way. So, put the script on your VPS and then setup a cron job so that the script runs everyday on the given time. 
+`` `python
+    python /path/to/packtpub-grabber/packtpub-grabber.py
+`` `
+#### Automaticamente
+Como o objetivo do script é automatizar todo o processo de obtenção de um Ebook gratuito todos os dias, você deve escolher uma forma automatizada. Portanto, coloque o script em seu VPS e, em seguida, configure uma tarefa cron para que o script seja executado todos os dias no horário determinado.
 
-Run _crontab -e_ and add the following lines to run the script everday at 6.30 PM. 
+Execute _crontab -e_ e adicione as seguintes linhas para executar o script everday às 18: 30h.
 
-```
-30 6 * * * python /path/to/packtpub-grabber/packtpub-grabber.py 2>>errors.log
-```
+`` `
+30 6 * * * python /path/to/packtpub-grabber/packtpub-grabber.py 2 >> errors.log
+`` `
 
-The errors, if any, can be viewed on errors.log file.
+Os erros, se houver, podem ser visualizados no arquivo errors.log.
