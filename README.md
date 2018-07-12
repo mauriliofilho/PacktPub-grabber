@@ -4,13 +4,13 @@ Reinvindique [eBook Gratuito de Aprendizagem de hoje da PacktPub] (https://www.p
 
 ## Dependências
 
-`` `sh
+```sh
 instalação pip -r requirements.txt
-`` `
+```
 Ou, no Arch Linux:
-`` `sh
+```sh
 instalação de pip2 -r requirements.txt
-`` `
+```
 ## Configuration
 Etapas para configurar o script.
 
@@ -30,9 +30,9 @@ O script envia o email de um endereço do Gmail que você especifica para o seu 
 * [Ativar acesso para aplicativos menos seguros] (https://support.google.com/accounts/answer/6010255?hl=pt-BR) na (nova) conta de envio do Gmail.
 * Substitua o "FROM", "TO", e "EMAIL PASSWORD" na última linha com o seu endereço de envio do Gmail, recebendo endereço de e-mail e a senha da conta de envio do Gmail, respectivamente.
 
-`` `python
+```python
     send_email ("FROM", "TO", "PacktPub Grabber", resultado, "EMAIL PASSWORD")
-`` `
+```
 Após cada execução, você receberá um e-mail no endereço "TO" com a mensagem de sucesso / falha.
 
 ! [Email do PacktPub Grabber] (https://cloud.githubusercontent.com/assets/5013296/17832328/c5f7f45c-671f-11e6-986f-cd78133329d4.png)
@@ -43,16 +43,16 @@ Duas maneiras de executar o script.
 #### Manualmente
 Para executar manualmente, basta ir ao shell e digitar:
 
-`` `python
+```python
     python /path/to/packtpub-grabber/packtpub-grabber.py
-`` `
+```
 #### Automaticamente
 Como o objetivo do script é automatizar todo o processo de obtenção de um Ebook gratuito todos os dias, você deve escolher uma forma automatizada. Portanto, coloque o script em seu VPS e, em seguida, configure uma tarefa cron para que o script seja executado todos os dias no horário determinado.
 
 Execute _crontab -e_ e adicione as seguintes linhas para executar o script everday às 18: 30h.
 
-`` `
+```
 30 6 * * * python /path/to/packtpub-grabber/packtpub-grabber.py 2 >> errors.log
-`` `
+```
 
 Os erros, se houver, podem ser visualizados no arquivo errors.log.
