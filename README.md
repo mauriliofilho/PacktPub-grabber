@@ -1,6 +1,6 @@
 # PacktPub Grabber
 
-Clamar [eBook Gratuito de Aprendizagem de hoje da PacktPub] (https://www.packtpub.com/packt/offers/free-learning) e notifica-lo via e-mail.
+Reinvindique [eBook Gratuito de Aprendizagem de hoje da PacktPub] (https://www.packtpub.com/packt/offers/free-learning) e receba notificação via e-mail.
 
 ## Dependências
 
@@ -37,7 +37,7 @@ Após cada execução, você receberá um e-mail no endereço "TO" com a mensage
 
 ! [Email do PacktPub Grabber] (https://cloud.githubusercontent.com/assets/5013296/17832328/c5f7f45c-671f-11e6-986f-cd78133329d4.png)
 
-## Corre
+## Executar
 Duas maneiras de executar o script.
 
 #### Manualmente
